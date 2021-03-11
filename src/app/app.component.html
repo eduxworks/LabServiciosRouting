@@ -1,10 +1,6 @@
 <app-top-banner></app-top-banner>
-<app-toolbar (dandoClick)="opcionMenu = $event"></app-toolbar>
-<app-mycards *ngIf="opcionMenu==1"></app-mycards>
-<app-acordion *ngIf="opcionMenu==1"></app-acordion>
-<app-table *ngIf="opcionMenu==2"></app-table>
-<app-my-portfolio *ngIf="opcionMenu==3"></app-my-portfolio>
-<app-myform *ngIf="opcionMenu==4"></app-myform>
+<app-toolbar></app-toolbar>
+<router-outlet></router-outlet>
 <app-my-footer></app-my-footer>
 
 

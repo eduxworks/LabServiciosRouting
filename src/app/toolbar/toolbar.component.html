@@ -2,19 +2,19 @@
   <mat-toolbar color="primary">
     <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon" [matMenuTriggerFor]="menu">
       <mat-menu #menu="matMenu">
-        <button mat-menu-item (click)="onclickServicios()">
+        <button mat-menu-item (click)="onclickMenu('mycards')">
           <mat-icon>home_work</mat-icon>
           <span>Home</span>
         </button>
-        <button mat-menu-item (click)="onclickEquipo()">
+        <button mat-menu-item (click)="onclickMenu('table')">
           <mat-icon>groups</mat-icon>
           <span>Nuestro Equipo</span>
         </button>
-        <button mat-menu-item (click)="onclicksPortafolio()">
+        <button mat-menu-item routerLink="/myportafolio" routerLinkActive="active">
           <mat-icon>poll</mat-icon>
           <span>Portafolio</span>
         </button>
-        <button mat-menu-item (click)="onclickEscribenos()">
+        <button mat-menu-item routerLink="/myform" routerLinkActive="active">
           <mat-icon>contact_page</mat-icon>
           <span>Escríbenos</span>
         </button>

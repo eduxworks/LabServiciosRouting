@@ -23,7 +23,9 @@ import { MymenuComponent } from './mymenu/mymenu.component';
 import { MyformComponent } from './myform/myform.component';
 import { MyFooterComponent } from './my-footer/my-footer.component';
 import { MyPortfolioComponent } from './my-portfolio/my-portfolio.component';
-
+import {PersonalService} from './servicios/personal.service';
+import { AppRoutingModule } from './app-routing.module';
+import {RouterModule} from '@angular/router';
 
 
 @NgModule({
@@ -53,8 +55,10 @@ import { MyPortfolioComponent } from './my-portfolio/my-portfolio.component';
     MatCardModule,
     MatMenuModule,
     NgbModule,
+    AppRoutingModule,
+    RouterModule,
   ],
-  providers: [],
+  providers: [PersonalService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

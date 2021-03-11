@@ -1,4 +1,6 @@
+/* tslint:disable:typedef-whitespace */
 import { Component, OnInit } from '@angular/core';
+import {PersonalService} from '../servicios/personal.service';
 
 @Component({
   selector: 'app-table',
@@ -7,8 +9,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TableComponent implements OnInit {
   interpolationTitle = 'NUESTRO EQUIPO';
-
-    constructor() { }
+  persona: any[] = [];
+  constructor(private servicePersonal: PersonalService) {
+    this.persona = servicePersonal.obtenerPersonal();
+  }
 
   ngOnInit(): void {
   }

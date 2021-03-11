@@ -1,5 +1,5 @@
-import { Component, Output, EventEmitter} from '@angular/core';
-import {AppComponent} from '../app.component';
+import { Component} from '@angular/core';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-toolbar',
@@ -8,17 +8,23 @@ import {AppComponent} from '../app.component';
 })
 export class ToolbarComponent {
 
-  @Output() dandoClick = new EventEmitter<number>();
-  onclickServicios(){
-    this.dandoClick.emit(1);
+  constructor(private router: Router) {
   }
-  onclickEquipo(){
-    this.dandoClick.emit(2);
-  }
-  onclicksPortafolio(){
-    this.dandoClick.emit(3);
-  }
-  onclickEscribenos(){
-    this.dandoClick.emit(4);
+  // tslint:disable-next-line:typedef
+  onclickMenu(tag){
+    if (tag === 'mycards'){
+      this.router.navigate(['/mycards']);
+    }
+    else if (tag === 'table'){
+      this.router.navigate(['/table']);
+    }
+    /*
+   else if (tag === 'myportafolio'){
+     this.router.navigate(['/myportafolio']);
+   }
+   else if (tag === 'myform'){
+     this.router.navigate(['/myform']);
+   }
+   */
   }
 }
